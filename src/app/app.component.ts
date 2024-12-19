@@ -16,7 +16,9 @@ import {ArticleCommentsComponent} from './article-comments.component';
         </p>
       </article>
 
-      <article-comments />
+      @defer {
+        <article-comments />
+      }
 
     </div>
   `,
