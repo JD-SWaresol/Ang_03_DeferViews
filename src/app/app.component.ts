@@ -16,7 +16,15 @@ import {ArticleCommentsComponent} from './article-comments.component';
         </p>
       </article>
 
-      @defer {
+      <button tyoe="button" #showComments>Show all comments</button>
+
+      <!-- 
+      Existen dos condiciones para '@defer':
+        - La pagina no mostrara la seccion de comments hasta que no se pase el cursor sobre el placeholder
+        - La pagina mostrara la seccion de comments hastga que se haga clic sobre el boton de 'Show all comments'
+      -->
+        
+      @defer (on hover; on interaction(showComments)) {
         <article-comments />
       } 
       @placeholder (minimum 1s) {
